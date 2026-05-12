@@ -1,0 +1,19 @@
+<resources>
+    <!-- Dark Premium Theme Colors -->
+    <color name="bg_dark">#0D1117</color>
+    <color name="bg_card">#161B22</color>
+    <color name="bg_surface">#1C2128</color>
+    <color name="accent_green">#2EA043</color>
+    <color name="accent_green_light">#3FB950</color>
+    <color name="accent_green_dark">#238636</color>
+    <color name="accent_yellow">#D29922</color>
+    <color name="accent_red">#DA3633</color>
+    <color name="accent_blue">#388BFD</color>
+    <color name="text_primary">#F0F6FC</color>
+    <color name="text_secondary">#8B949E</color>
+    <color name="text_muted">#484F58</color>
+    <color name="border_color">#30363D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

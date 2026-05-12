@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AGROTEC GUINEA</string>
+    <string name="scan_button">ESCANEAR CULTIVO</string>
+    <string name="analyzing">Analizando con Groq LPU...</string>
+    <string name="history_title">Historial</string>
+    <string name="market_title">Mercado 2026</string>
+    <string name="dashboard_title">Panel de Control</string>
+    <string name="diagnosis_complete">Diagnóstico Completo</string>
+    <string name="no_internet">Sin conexión a Internet</string>
+    <string name="offline_mode">Modo Offline Activo</string>
+</resources>

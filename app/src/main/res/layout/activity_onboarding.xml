@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:orientation="vertical">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/logoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="36dp"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo_agrotec" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="AGROTEC GUINEA"
+            android:textColor="@color/accent_green"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Sistema de Diagnóstico Agrícola con IA"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Scrollable Terms -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Términos y Condiciones de Uso"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Team Info Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#1A2EA0"
+                app:cardCornerRadius="12dp"
+                app:strokeWidth="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏆 II FORO NACIONAL DE IA — AAUCA 2026"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Aplicación desarrollada por el equipo de Ingeniería de Sistemas de la Universidad Afroamericana de África Central (AAUCA) para participar en el II Foro Nacional de Inteligencia Artificial, celebrado en el Campus AAUCA, Guinea Ecuatorial."
+                        android:textColor="#C5CAE9"
+                        android:textSize="13sp"
+                        android:lineSpacingExtra="3dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Developers Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/bg_card"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="@color/accent_green"
+                app:strokeWidth="1dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👨‍💻 EQUIPO DE DESARROLLO"
+                        android:textColor="@color/accent_green"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Tranquilino Mba Ncogo Andeme\n Josefa — Desarrolladora\n María — Diseñadora UX/UI"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="4dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Ingeniería de Sistemas • 4.º Año\nAAUCA — Guinea Ecuatorial"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="1. DERECHOS DE PROPIEDAD INTELECTUAL"
+                android:textColor="@color/accent_green"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="© 2026 Equipo AGROTEC GUINEA — AAUCA. Todos los derechos reservados. El código fuente, los diseños, los modelos de IA integrados y el nombre comercial 'AGROTEC GUINEA' son propiedad exclusiva del equipo desarrollador. Queda prohibida su reproducción total o parcial sin autorización expresa y por escrito."
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:lineSpacingExtra="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="2. PROPÓSITO DE LA APLICACIÓN"
+                android:textColor="@color/accent_green"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="AGROTEC GUINEA es una herramienta de apoyo agrícola basada en Inteligencia Artificial diseñada para asistir a agricultores y técnicos agrónomos en Guinea Ecuatorial. Los diagnósticos generados son orientativos y no sustituyen la consulta profesional de un agrónomo certificado."
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:lineSpacingExtra="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="3. TECNOLOGÍA UTILIZADA"
+                android:textColor="@color/accent_green"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Esta aplicación utiliza el motor de inferencia Groq LPU con modelos Llama-4 Scout para diagnóstico visual de plagas, Google Gemini para asesoramiento agronómico avanzado, y OpenWeatherMap para datos climáticos en tiempo real. La base de datos de tratamientos opera completamente sin conexión."
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:lineSpacingExtra="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="4. PRIVACIDAD Y DATOS"
+                android:textColor="@color/accent_green"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Las imágenes capturadas se procesan temporalmente a través de las APIs de Groq y Google para generar diagnósticos. No se almacenan imágenes en servidores externos. El historial de diagnósticos se guarda únicamente en el dispositivo del usuario."
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:lineSpacingExtra="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="5. LIMITACIÓN DE RESPONSABILIDAD"
+                android:textColor="@color/accent_green"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="El equipo desarrollador no se hace responsable de pérdidas económicas derivadas de decisiones agrícolas tomadas exclusivamente en base a los diagnósticos de esta aplicación. Recomendamos siempre validar con un técnico local especializado."
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp"
+                android:lineSpacingExtra="4dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="#1A3300"
+                app:cardCornerRadius="12dp"
+                app:strokeWidth="0dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="Al pulsar ACEPTO Y CONTINUAR confirmas haber leído y aceptado todos los términos anteriores y autorizas a la app a acceder a la cámara de tu dispositivo."
+                    android:textColor="#A5D6A7"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3dp"/>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Scroll hint -->
+    <TextView
+        android:id="@+id/tvScrollHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="▼ Desplázate hasta el final para aceptar"
+        android:textColor="@color/accent_yellow"
+        android:textSize="12sp" />
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnDecline"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/bg_surface"
+            android:text="RECHAZAR"
+            android:textColor="@color/text_secondary"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="2"
+            android:backgroundTint="@color/accent_green"
+            android:enabled="false"
+            android:text="ACEPTO Y CONTINUAR"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            style="@style/Widget.Material3.Button" />
+    </LinearLayout>
+
+</LinearLayout>

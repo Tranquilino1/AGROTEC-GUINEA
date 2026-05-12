@@ -16,9 +16,10 @@ android {
         versionCode 2
         versionName "2.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "GROQ_API_KEY", '"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"'
-        buildConfigField "String", "GEMINI_API_KEY", '"AIzaSyC-rbVtiwh3QBNumBLATqQZYxvOpVJw-8Q"'
-        buildConfigField "String", "WEATHER_API_KEY", '"3478261cb2854830c783f610051c9d60"'
+        // Configure your API keys in local.properties or replace placeholders below:
+        buildConfigField "String", "GROQ_API_KEY", '"YOUR_GROQ_API_KEY_HERE"'
+        buildConfigField "String", "GEMINI_API_KEY", '"YOUR_GEMINI_API_KEY_HERE"'
+        buildConfigField "String", "WEATHER_API_KEY", '"YOUR_OPENWEATHER_API_KEY_HERE"'
     }
 
     buildTypes {

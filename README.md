@@ -111,7 +111,6 @@ Consulte los detalles técnicos en la carpeta `/docs`:
 - 📄 **[Manual de Arquitectura Técnica](docs/manual_arquitectura_tecnica.md)**
 - 📄 **[Resumen Ejecutivo para el Jurado](docs/resumen_jurado_agrotec.md)**
 - 📑 **[Resumen Ejecutivo Oficial (PDF)](docs/Resumen_Agrotec_Guinea_AAUCA.pdf)**
-- 📊 **[Presentación de 5 Minutos (PowerPoint)](docs/Presentacion_Agrotec_Guinea_5Min.pptx)**
 - 🎨 **[Pitch Deck Visual Ilustrado (PDF)](docs/Agrotec_Guinea_Pitch_Visual.pdf)**
 - 🚀 **[Presentación Interactiva en Vivo (HTML/3D)](https://tranquilino1.github.io/AGROTEC-GUINEA/docs/Presentacion_Interactiva.html)**
 

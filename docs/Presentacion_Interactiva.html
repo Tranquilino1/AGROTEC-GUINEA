@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Pitch Deck - AGROTEC GUINEA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.min.css" id="theme">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
+    <!-- Tailwind for quick styling inside slides -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .reveal { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .text-emerald { color: #1D7A46 !important; }
+        .text-gold { color: #D4AF37 !important; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+        }
+        .bg-neural {
+            background-image: radial-gradient(circle at 2px 2px, rgba(29, 122, 70, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-neural">
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- SLIDE 1: PORTADA -->
+            <section data-transition="zoom" data-background-color="#0A0C0B">
+                <div class="flex flex-col items-center justify-center h-full">
+                    <div class="glass-panel text-center inline-block">
+                        <h1 class="text-7xl font-black mb-0 tracking-tighter">AGROTEC <span class="text-emerald">GUINEA</span></h1>
+                        <h3 class="text-2xl text-gold mt-4 italic font-light">Soberanía Alimentaria a través de la IA</h3>
+                        <div class="mt-8 border-t border-white/20 pt-6">
+                            <p class="text-lg text-gray-400">II Foro Nacional de IA - IndabaX GE 2026</p>
+                            <p class="text-sm text-gray-500 uppercase tracking-[0.3em] font-bold mt-2">AAUCA</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: EL PROBLEMA -->
+            <section data-transition="slide" data-background-color="#0A0C0B">
+                <h2 class="text-left text-4xl mb-12 border-l-8 border-emerald pl-6 text-white">El Problema <span class="text-gray-500 font-light text-2xl block mt-2">El "Dolor" del campo ecuatoguineano</span></h2>
+                
+                <div class="grid grid-cols-2 gap-10 text-left">
+                    <div class="glass-panel">
+                        <h3 class="text-emerald text-5xl mb-4">40%</h3>
+                        <p class="text-xl text-gray-300">Pérdida anual de producción en cultivos críticos (yuca, plátano, cacao) por plagas no detectadas a tiempo.</p>
+                    </div>
+                    <div class="glass-panel">
+                        <h3 class="text-emerald text-5xl mb-4">0.0</h3>
+                        <p class="text-xl text-gray-300">Escasez de técnicos agrónomos disponibles en zonas rurales y remotas del interior del país.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: LA SOLUCIÓN -->
+            <section data-transition="fade" data-background-color="#0A0C0B">
+                <div class="flex items-center gap-10">
+                    <div class="w-1/2 text-left">
+                        <h2 class="text-5xl mb-6 text-white tracking-tighter">LA SOLUCIÓN</h2>
+                        <h4 class="text-gold text-2xl mb-8 italic">"Un ingeniero agrónomo en el bolsillo"</h4>
+                        <ul class="text-2xl text-gray-300 space-y-6 leading-relaxed">
+                            <li class="flex items-center gap-4"><span class="text-emerald text-3xl">✓</span> Diagnóstico visual con solo una foto.</li>
+                            <li class="flex items-center gap-4"><span class="text-emerald text-3xl">✓</span> Respuestas instantáneas en < 2 segundos.</li>
+                            <li class="flex items-center gap-4"><span class="text-emerald text-3xl">✓</span> Interfaz intuitiva y asistida por voz.</li>
+                        </ul>
+                    </div>
+                    <div class="w-1/2 relative">
+                        <!-- Espacio para la imagen Hero generada -->
+                        <div class="absolute inset-0 bg-emerald/20 blur-[100px] rounded-full"></div>
+                        <img src="../pitch_hero_1778697414543.png" alt="App Preview" class="relative z-10 rounded-2xl shadow-2xl border border-white/10 w-full" onerror="this.src='https://images.unsplash.com/photo-1592982537447-6f2a6a0a3864?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: TECNOLOGÍA DUAL CORE -->
+            <section data-transition="convex" data-background-color="#0A0C0B">
+                <h2 class="text-4xl mb-2 text-white">Tecnología de Élite</h2>
+                <p class="text-xl text-gold mb-10">Arquitectura Motor Dual-Core (Nube + Local)</p>
+                
+                <div class="grid grid-cols-2 gap-8 text-left">
+                    <div class="glass-panel border-emerald/50">
+                        <h3 class="text-emerald text-2xl mb-4">1. MODO NUBE (GROQ LPU)</h3>
+                        <p class="text-lg text-gray-300 mb-4">Para zonas con conectividad:</p>
+                        <ul class="text-base text-gray-400 space-y-2">
+                            <li>• Inferencia ultra-rápida.</li>
+                            <li>• Modelos de visión multimodal (Llama-3-Vision).</li>
+                            <li>• Consejos integrados con Google Gemini.</li>
+                        </ul>
+                    </div>
+                    <div class="glass-panel border-gold/50">
+                        <h3 class="text-gold text-2xl mb-4">2. MODO CAMPO (OFFLINE)</h3>
+                        <p class="text-lg text-gray-300 mb-4">Para zonas remotas sin red:</p>
+                        <ul class="text-base text-gray-400 space-y-2">
+                            <li>• Modelos TensorFlow Lite cuantizados.</li>
+                            <li>• Integrados nativamente en el móvil.</li>
+                            <li>• Privacidad total y cero gasto de datos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: IMPACTO -->
+            <section data-transition="slide" data-background-color="#1D7A46">
+                <div class="glass-panel bg-black/40 border-none h-full flex flex-col justify-center">
+                    <h2 class="text-5xl text-white mb-12 tracking-tighter">Impacto Real</h2>
+                    <div class="grid grid-cols-3 gap-6 text-center">
+                        <div>
+                            <div class="text-5xl mb-4">💰</div>
+                            <h4 class="text-white text-xl mb-2">Mercado Justo</h4>
+                            <p class="text-sm text-green-100">Calculadora de precios CFA para evitar la explotación de intermediarios.</p>
+                        </div>
+                        <div>
+                            <div class="text-5xl mb-4">🎙️</div>
+                            <h4 class="text-white text-xl mb-2">Voz Inclusiva</h4>
+                            <p class="text-sm text-green-100">Asistencia TTS en español, rompiendo barreras de alfabetización.</p>
+                        </div>
+                        <div>
+                            <div class="text-5xl mb-4">🛡️</div>
+                            <h4 class="text-white text-xl mb-2">Soberanía</h4>
+                            <p class="text-sm text-green-100">Datos privados y locales. Tecnología hecha en G.E. para G.E.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: EQUIPO Y CIERRE -->
+            <section data-transition="zoom" data-background-color="#0A0C0B">
+                <h2 class="text-4xl text-emerald mb-8">El Equipo Fundador</h2>
+                <div class="glass-panel text-center max-w-3xl mx-auto mb-10">
+                    <p class="text-xl text-white font-bold mb-4">Tranquilino Mba Ncogo <br><span class="text-sm text-emerald font-normal">Arquitecto de Software & Lead AI Engineer</span></p>
+                    <p class="text-xl text-white font-bold mb-4">Josefa Adela Mikue <br><span class="text-sm text-emerald font-normal">Especialista en Backend & API Integration</span></p>
+                    <p class="text-xl text-white font-bold">María Milagrosa Mbile <br><span class="text-sm text-emerald font-normal">Líder de UX/UI & Frontend Architect</span></p>
+                </div>
+                
+                <h3 class="text-2xl text-gold italic mb-4">"Programando el futuro de Guinea Ecuatorial"</h3>
+                <div class="inline-block bg-white text-black font-black px-8 py-3 rounded-full uppercase text-sm mt-4">
+                    AGROTEC GUINEA V4 FINAL - Lista para Producción
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            autoAnimate: true
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/scannerFragment">
+
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.agrotec.guinea.ui.scanner.ScannerFragment"
+        android:label="Escáner" />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.agrotec.guinea.ui.history.HistoryFragment"
+        android:label="Historial" />
+
+    <fragment
+        android:id="@+id/marketFragment"
+        android:name="com.agrotec.guinea.ui.market.MarketFragment"
+        android:label="Mercado" />
+
+    <fragment
+        android:id="@+id/guidesFragment"
+        android:name="com.agrotec.guinea.ui.guides.GuidesFragment"
+        android:label="Guías" />
+
+</navigation>

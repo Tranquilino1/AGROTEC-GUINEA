@@ -1,0 +1,48 @@
+<resources>
+    <!-- Agrotec Premium Palette: Apple Vision Pro / Fluent 3D Style -->
+    <color name="agrotec_green_deep">#0A2A1A</color>
+    <color name="agrotec_green_primary">#1D7A46</color>
+    <color name="agrotec_green_bright">#26FF5C</color>
+    <color name="agrotec_gold">#D4AF37</color>
+    <color name="agrotec_accent_cyan">#00F2FE</color>
+    
+    <!-- Glassmorphism & Neumorphism Surface Tokens -->
+    <color name="bg_dark_canvas">#0F1210</color>
+    <color name="bg_dark_surface">#1A1E1B</color>
+    <color name="glass_white_80">#CCFFFFFF</color>
+    <color name="glass_white_40">#66FFFFFF</color>
+    <color name="glass_white_20">#33FFFFFF</color>
+    <color name="glass_white_10">#1AFFFFFF</color>
+    <color name="glass_stroke">#40FFFFFF</color>
+    
+    <!-- Neumorphic Shadows -->
+    <color name="neu_light">#2A2E2B</color>
+    <color name="neu_shadow">#080A09</color>
+    
+    <!-- Text Palette -->
+    <color name="text_high_emphasis">#F0F6FC</color>
+    <color name="text_medium_emphasis">#8B949E</color>
+    <color name="text_low_emphasis">#484F58</color>
+    
+    <!-- Functional -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="error_vibrant">#FF3B30</color>
+    <color name="warning_gold">#FFD60A</color>
+
+    <!-- Compatibility Aliases -->
+    <color name="bg_dark">@color/bg_dark_canvas</color>
+    <color name="bg_card">@color/bg_dark_surface</color>
+    <color name="bg_surface">@color/bg_dark_surface</color>
+    <color name="accent_green">@color/agrotec_green_primary</color>
+    <color name="accent_green_light">@color/agrotec_green_bright</color>
+    <color name="accent_green_dark">@color/agrotec_green_deep</color>
+    <color name="accent_yellow">@color/warning_gold</color>
+    <color name="accent_red">@color/error_vibrant</color>
+    <color name="accent_blue">@color/agrotec_accent_cyan</color>
+    <color name="text_primary">@color/text_high_emphasis</color>
+    <color name="text_secondary">@color/text_medium_emphasis</color>
+    <color name="text_muted">@color/text_low_emphasis</color>
+    <color name="border_color">@color/glass_stroke</color>
+</resources>

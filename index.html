@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGROTEC GUINEA — IA Agrícola de Vanguardia</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Sistema de diagnóstico agrícola con IA para Guinea Ecuatorial. Desarrollado en la AAUCA para el Foro IndabaX 2026.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700;800&display=swap" rel="stylesheet">
+    
+    <!-- GSAP Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        agrotec: {
+                            emerald: '#1D7A46',
+                            gold: '#D4AF37',
+                            dark: '#0A0C0B',
+                            glass: 'rgba(255, 255, 255, 0.03)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0A0C0B; color: white; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .emerald-glow { box-shadow: 0 0 50px -12px rgba(29, 122, 70, 0.5); }
+        .text-gradient { background: linear-gradient(to right, #ffffff, #1D7A46, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bg-neural { background-image: radial-gradient(circle at 2px 2px, rgba(29, 122, 70, 0.1) 1px, transparent 0); background-size: 40px 40px; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        .floating { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-neural overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full z-50 py-6 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-agrotec-emerald rounded-xl flex items-center justify-center emerald-glow">
+                    <i data-lucide="leaf" class="text-white"></i>
+                </div>
+                <span class="text-2xl font-extrabold tracking-tighter uppercase">AGROTEC <span class="text-agrotec-emerald">GUINEA</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-widest text-gray-400">
+                <a href="#tech" class="hover:text-agrotec-emerald transition">Tecnología</a>
+                <a href="#repo" class="hover:text-agrotec-emerald transition">Repositorio</a>
+                <a href="AGROTEC_GUINEA_V4_FINAL.apk" download class="bg-agrotec-emerald text-white px-6 py-2.5 rounded-xl font-black hover:bg-green-700 transition">DESCARGAR APK</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-agrotec-emerald/20 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-agrotec-gold/10 rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-agrotec-gold text-xs font-black tracking-widest mb-8 uppercase" id="hero-badge">
+                <i data-lucide="award" class="w-4 h-4"></i> Edición Final IndabaX 2026
+            </div>
+            
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9] uppercase italic" id="hero-title">
+                Soberanía <br />
+                <span class="text-gradient">Tecnológica</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 font-medium leading-relaxed" id="hero-desc">
+                Diagnóstico agrícola en tiempo real impulsado por IA de nivel industrial. <br class="hidden md:block" />
+                Desarrollado por la Facultad de Ingenierías - AAUCA.
+            </p>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-20" id="hero-actions">
+                <a href="AGROTEC_GUINEA_V4_FINAL.apk" download class="group bg-agrotec-emerald text-white px-12 py-6 rounded-2xl font-black text-2xl flex items-center gap-4 transition-all hover:scale-105 emerald-glow active:scale-95">
+                    <i data-lucide="download" class="w-8 h-8"></i> DESCARGAR V4 FINAL
+                </a>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-8 p-6 glass rounded-[2.5rem]">
+                    <div class="bg-white p-3 rounded-2xl shadow-2xl overflow-hidden floating" id="qrcode-container">
+                        <!-- QR se genera por JS -->
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <p class="text-xs font-black text-agrotec-gold uppercase tracking-[0.2em] mb-2">Escanea para instalar</p>
+                        <p class="text-2xl font-black leading-tight uppercase italic">Descarga <br/><span class="text-agrotec-emerald">Directa</span></p>
+                        <p class="text-gray-500 text-xs mt-4 max-w-[150px]">Apunta con tu cámara para obtener la V4 Final.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHARE SESSION -->
+    <section class="py-20 glass border-y border-white/10" id="share">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-black mb-10 uppercase tracking-widest italic text-agrotec-emerald">Difunde la Innovación Agrícola</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <button onclick="shareWhatsApp()" class="flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba58] text-white px-8 py-4 rounded-2xl font-bold transition transform hover:scale-105 shadow-xl">
+                    <i data-lucide="share-2" class="w-5 h-5"></i> Compartir WhatsApp
+                </button>
+                <button onclick="copyLink()" id="copy-btn" class="flex items-center gap-3 glass text-white px-8 py-4 rounded-2xl font-bold transition hover:bg-white/10">
+                    <i data-lucide="smartphone" class="w-5 h-5"></i> Copiar Enlace
+                </button>
+                <a href="https://github.com/Tranquilino1/AGROTEC-GUINEA" target="_blank" class="flex items-center gap-3 bg-white text-black px-8 py-4 rounded-2xl font-bold transition transform hover:scale-105">
+                    <i data-lucide="github" class="w-5 h-5"></i> Repositorio GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECH GRID (BENTO) -->
+    <section id="tech" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="md:col-span-2 p-12 rounded-[2.5rem] glass flex flex-col justify-end min-h-[450px] relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-12 text-agrotec-emerald/10 scale-[4] group-hover:scale-[5] transition-transform duration-700">
+                        <i data-lucide="cpu" class="w-32 h-32"></i>
+                    </div>
+                    <i data-lucide="cpu" class="text-agrotec-emerald mb-8 w-16 h-16"></i>
+                    <h3 class="text-5xl font-black mb-4 uppercase italic leading-none">Motor Groq LPU</h3>
+                    <p class="text-gray-400 text-lg max-w-md">Diagnósticos visuales en < 2 segundos mediante modelos de visión multimodal de última generación.</p>
+                </div>
+                
+                <div class="p-10 rounded-[2.5rem] glass flex flex-col justify-end group">
+                    <i data-lucide="zap" class="text-agrotec-gold mb-6 w-12 h-12 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-2xl font-black mb-2 uppercase">Dual Core</h3>
+                    <p class="text-gray-500 text-sm">Resiliencia total: Funciona en la nube o local mediante TFLite para zonas sin red.</p>
+                </div>
+                
+                <div class="p-10 rounded-[2.5rem] glass flex flex-col justify-end group">
+                    <i data-lucide="shield-check" class="text-agrotec-emerald mb-6 w-12 h-12 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-2xl font-black mb-2 uppercase">Privacidad</h3>
+                    <p class="text-gray-500 text-sm">Los datos agrícolas son soberanos. Procesamiento local y cifrado de extremo a extremo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-20 border-t border-white/10 text-center bg-black/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-center gap-3 mb-8">
+                <i data-lucide="leaf" class="text-agrotec-emerald w-8 h-8"></i>
+                <span class="text-2xl font-black tracking-tighter uppercase">Agrotec Guinea</span>
+            </div>
+            <p class="text-gray-500 max-w-md mx-auto mb-10 font-medium italic">
+                "Protegiendo la soberanía alimentaria de Guinea Ecuatorial a través de la Inteligencia Artificial."
+            </p>
+            <div class="w-full h-px bg-white/5 mb-10"></div>
+            <p class="text-[10px] text-gray-700 uppercase tracking-[0.5em] font-black">
+                © 2026 AAUCA · Ingeniería de Sistemas · Ciudad de la Paz
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        // Inicializar Iconos
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-black/80', 'backdrop-blur-xl', 'border-b', 'border-white/10', 'py-4');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.remove('bg-black/80', 'backdrop-blur-xl', 'border-b', 'border-white/10', 'py-4');
+                nav.classList.add('py-6');
+            }
+        });
+
+        // QR Code Generation
+        const repoUrl = "https://github.com/Tranquilino1/AGROTEC-GUINEA/raw/main/AGROTEC_GUINEA_V4_FINAL.apk";
+        new QRCode(document.getElementById("qrcode-container"), {
+            text: repoUrl,
+            width: 200,
+            height: 200,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+
+        // Animations with GSAP
+        gsap.from("#hero-badge", { opacity: 0, y: 20, duration: 1, ease: "power4.out" });
+        gsap.from("#hero-title", { opacity: 0, y: 40, duration: 1.2, delay: 0.2, ease: "power4.out" });
+        gsap.from("#hero-desc", { opacity: 0, y: 30, duration: 1, delay: 0.5, ease: "power4.out" });
+        gsap.from("#hero-actions", { opacity: 0, scale: 0.9, duration: 1, delay: 0.8, ease: "back.out(1.7)" });
+
+        // Functions
+        function shareWhatsApp() {
+            const msg = `🌿 *Agrotec Guinea V4 Final*\n\nDiagnóstico agrícola con IA en tiempo real para Guinea Ecuatorial. Descarga la APK aquí:\n\n${window.location.href}`;
+            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href);
+            const btn = document.getElementById('copy-btn');
+            btn.innerHTML = '<i data-lucide="check" class="w-5 h-5"></i> ¡Copiado!';
+            lucide.createIcons();
+            setTimeout(() => {
+                btn.innerHTML = '<i data-lucide="smartphone" class="w-5 h-5"></i> Copiar Enlace';
+                lucide.createIcons();
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

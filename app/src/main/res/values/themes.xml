@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Agrotec Premium Dark Theme (Versión de Ayer) -->
+    <style name="Theme.AgrotecGuinea" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Brand Colors -->
+        <item name="colorPrimary">@color/agrotec_green_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/agrotec_green_deep</item>
+        
+        <!-- Backgrounds -->
+        <item name="android:windowBackground">@color/bg_dark_canvas</item>
+        <item name="android:statusBarColor">@color/bg_dark_canvas</item>
+        <item name="android:navigationBarColor">@color/bg_dark_canvas</item>
+
+        <!-- Typography -->
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- Glassmorphism Card Style -->
+    <style name="Widget.Agrotec.GlassCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/glass_white_10</item>
+        <item name="cardElevation">0dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Agrotec.Large</item>
+        <item name="strokeColor">@color/glass_stroke</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <!-- Neumorphic Button Style -->
+    <style name="Widget.Agrotec.NeumorphicButton" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:stateListAnimator" tools:targetApi="l">@animator/neu_button_press</item>
+    </style>
+
+    <style name="ShapeAppearance.Agrotec.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.AgrotecGuinea.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/bg_dark_canvas</item>
+        <item name="android:statusBarColor">@color/bg_dark_canvas</item>
+        <item name="android:navigationBarColor">@color/bg_dark_canvas</item>
+    </style>
+</resources>

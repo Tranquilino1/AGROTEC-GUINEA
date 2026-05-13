@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark_canvas">
+
+    <!-- Background Decoration -->
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-100dp"
+        android:background="@drawable/circle_gradient_blur"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/logoAgrotec"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/logo_agrotec"
+            app:tint="@color/agrotec_green_bright"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="BIENVENIDO A AGROTEC 2026"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"/>
+
+        <!-- Virtual Assistant Message (Glassmorphism) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/assistantCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            style="@style/Widget.Agrotec.GlassCard">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <!-- Avatar Placeholder (Agrónomo Local) -->
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    android:background="@color/glass_white_20"
+                    android:padding="8dp"
+                    app:tint="@color/agrotec_gold"/>
+
+                <TextView
+                    android:id="@+id/tvAssistantMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Hola, soy tu asistente agrónomo de la AAUCA. Te guiaré para proteger tus cultivos en Djibloho y toda Guinea."
+                    android:textColor="@color/text_high_emphasis"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Términos y Condiciones Legales"
+            android:textColor="@color/agrotec_accent_cyan"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:background="@color/glass_white_10"
+            android:padding="12dp">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Esta aplicación utiliza IA para diagnósticos agrícolas. El equipo de AGROTEC GUINEA (AAUCA) no se hace responsable de pérdidas por diagnósticos erróneos. Se recomienda validar siempre con un técnico local. Los precios mostrados son estimaciones para Mayo 2026 en el mercado de Bata y Malabo. Sus datos de ubicación se procesan localmente para ajustar el riesgo de plagas en la zona de Djibloho."
+                android:textColor="@color/text_medium_emphasis"
+                android:textSize="13sp"
+                android:lineSpacingExtra="4dp"/>
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            style="@style/Widget.Agrotec.NeumorphicButton"
+            android:text="ACEPTAR Y EMPEZAR"
+            android:enabled="false"/>
+
+        <TextView
+            android:id="@+id/tvScrollHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Desliza para leer todo"
+            android:textColor="@color/text_low_emphasis"
+            android:textSize="11sp"/>
+
+    </LinearLayout>
+</FrameLayout>

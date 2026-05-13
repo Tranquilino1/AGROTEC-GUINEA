@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark_canvas">
+
+    <!-- ─── CAMERA LAYER ─── -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:scaleType="fillCenter"/>
+
+    <!-- 3D PARTICLE OVERLAY -->
+    <com.agrotec.guinea.ui.scanner.ParticleScanView
+        android:id="@+id/particleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"/>
+
+    <!-- TOP CONTROL BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Agrotec.GlassCard"
+            app:cardBackgroundColor="@color/glass_white_20">
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+                
+                <TextView
+                    android:id="@+id/tvWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌤 AAUCA · 28°C"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/btnHistory"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_recent_history"
+            android:background="@drawable/neu_button_bg"
+            app:tint="@color/white"/>
+    </LinearLayout>
+
+    <!-- SCANNER TARGET AREA -->
+    <View
+        android:id="@+id/scanLine"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:background="@color/agrotec_green_bright"/>
+
+    <!-- ─── RESULT CARD (GLASSMORPHISM) ─── -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/resultCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        style="@style/Widget.Agrotec.GlassCard">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvPest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detectando..."
+                android:textColor="@color/agrotec_green_bright"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvTreatment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="El tratamiento aparecerá aquí."
+                android:textColor="@color/text_medium_emphasis"
+                android:textSize="14sp"/>
+
+            <Button
+                android:id="@+id/btnAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                style="@style/Widget.Agrotec.NeumorphicButton"
+                android:text="VER DETALLES"
+                android:backgroundTint="@color/agrotec_green_primary"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- FLOATING ACTION BUTTON (SCAN) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/scanFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="40dp"
+        android:src="@android:drawable/ic_menu_camera"
+        app:backgroundTint="@color/agrotec_green_primary"
+        app:tint="@color/white"
+        app:fabSize="normal"
+        app:elevation="8dp"/>
+
+    <!-- ─── RESULTS CONTAINER (HIDDEN BY DEFAULT) ─── -->
+    <ScrollView
+        android:id="@+id/resultsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_dark_canvas"
+        android:visibility="gone"
+        android:elevation="100dp"
+        android:fillViewport="true">
+        
+        <!-- Contenido detallado (Reutilizado de la versión light pero con estilo dark) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+            
+            <ImageButton
+                android:id="@+id/btnCloseResults"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/white"
+                android:layout_gravity="end"/>
+
+            <TextView
+                android:id="@+id/tvPestDetailed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold"/>
+            
+            <TextView
+                android:id="@+id/tvTreatmentDetailed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_medium_emphasis"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/btnReadAloud"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="32dp"
+                style="@style/Widget.Agrotec.NeumorphicButton"
+                android:text="🔊 ESCUCHAR"
+                android:backgroundTint="@color/agrotec_green_primary"/>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

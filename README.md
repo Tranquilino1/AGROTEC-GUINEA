@@ -110,6 +110,8 @@ com.agrotec.guinea/
 Consulte los detalles técnicos en la carpeta `/docs`:
 - 📄 **[Manual de Arquitectura Técnica](docs/manual_arquitectura_tecnica.md)**
 - 📄 **[Resumen Ejecutivo para el Jurado](docs/resumen_jurado_agrotec.md)**
+- 📑 **[Resumen Ejecutivo Oficial (PDF)](docs/Resumen_Agrotec_Guinea_AAUCA.pdf)**
+- 📊 **[Presentación de 5 Minutos (PowerPoint)](docs/Presentacion_Agrotec_Guinea_5Min.pptx)**
 
 ---
 
